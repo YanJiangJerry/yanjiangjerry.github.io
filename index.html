@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yan Jiang</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./script.js"></script>
+
+  <!-- Typed (hero line) -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <!-- tsParticles (interactive background for About) -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="brand">Yan Jiang</div>
+      <nav class="links">
+        <a href="#about">About</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
+      </nav>
+      <div class="nav-ops">
+        <button id="theme-toggle" class="toggle" aria-label="Toggle theme">
+          <span class="knob"></span>
+        </button>
+        <i class="fa-solid fa-moon moon-icon" aria-hidden="true" title="Toggle theme"></i>
+      </div>
+    </div>
+  </header>
+
+  <section id="about" class="section about-section">
+    <div id="about-bg"></div>
+
+    <div class="container about-wrap about-wrap-no-photo hover-sheen">
+      <div class="about-text">
+        <h1>Yan Jiang <span class="name-cn">姜彦</span></h1>
+        <h2><span id="typed-text"></span></h2>
+        <p class="affiliation">School of EECS, The University of Queensland, Australia</p>
+
+        <p class="lead">
+          I am a PhD student at <span class="highlight">The University of Queensland (UQ)</span>, Australia.
+          My research focuses on <span class="highlight">large language models (LLMs)</span> and
+          <span class="highlight">diffusion large language models (dLLMs)</span>, conducted under the supervision of
+          Dr. <a href="https://ruihongqiu.github.io/">Ruihong Qiu</a> and
+          Prof. <a href="https://scholar.google.com/citations?user=iAWMsgEAAAAJ&hl=en">Zi (Helen) Huang</a>.
+          I completed my dual Bachelor of Computer Science and Master of Data Science degrees at UQ under the supervision of
+          Prof. <a href="http://staff.itee.uq.edu.au/huang/">Zi (Helen) Huang</a>, graduating on
+          <span class="highlight">16 December 2023</span>.
+        </p>
+
+        <div class="socials">
+          <a href="mailto:yan.jiang@uq.edu.au" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://scholar.google.com/citations?user=KDV10LYAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+          <a href="https://github.com/YanJiangJerry" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://twitter.com/UQYanJiangJerry" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://orcid.org/0009-0008-0641-3259" target="_blank" rel="noopener" aria-label="ORCID"><i class="fa-brands fa-orcid"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="publications" class="section">
+    <div class="container">
+      <h2 class="section-title">Publications</h2>
+
+      <div class="pub-list">
+
+        <!-- GFMate -->
+        <article class="pub-row pub-row-no-media">
+          <div class="pub-content">
+            <h3>GFMate: Empowering Graph Foundation Models with Test-time Prompt Tuning</h3>
+            <div class="authors">
+              <strong>Yan Jiang</strong>, <a href="https://ruihongqiu.github.io/">Ruihong Qiu</a>, <a href="https://scholar.google.com/citations?user=iAWMsgEAAAAJ&hl=en">Zi Huang</a>
+            </div>
+            <p class="meta"><span class="pub-venue">ICML 2026</span></p>
+            <p>We propose GFMate, a pre-training-agnostic test-time graph prompt tuning framework that exploits both labelled and unlabelled target-domain data for Graph Foundation Models.</p>
+            <div class="cta">
+              <button class="btn ghost open-abs"
+                data-title="GFMate: Empowering Graph Foundation Models with Test-time Prompt Tuning"
+                data-abstract="Graph prompt tuning has shown great potential in graph learning by introducing trainable prompts to enhance the model performance in conventional single-domain scenarios. Recent research has extended graph prompts to improve Graph Foundation Models (GFMs) by few-shot tuning auxiliary prompts. Despite their progress, most existing methods embed source-domain information into prompts, which serve either as input to GFMs or encoded during model pre-training. Such prompt entanglement with specific source domains and GFM pre-training strategy restricts their generalisability to other domains and different GFMs. Furthermore, existing GFM prompts merely rely on few-shot tuning for adaptation, neglecting the rich information in unlabelled target domain test data. Motivated by these insights, this paper aims to empower GFMs with pre-training-agnostic test-time graph prompt tuning, named GFMate. GFMate introduces centroid and layer prompts applied after pre-training on target domains, avoiding entanglement with specific source domains and model pre-training. In addition, a test-time complementary learning objective is devised to exploit both labelled and unlabelled target domain data for effective test-time prompt tuning. Extensive experiments on 12 benchmark datasets demonstrate the superior performance and efficiency of GFMate, achieving improvements of up to 30.63%.">
+                Show abstract
+              </button>
+              <a class="btn" href="https://arxiv.org/abs/2605.14809" target="_blank" rel="noopener">Paper</a>
+              <a class="btn" href="https://github.com/YanJiangJerry/GFMate" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Block-R1 -->
+        <article class="pub-row pub-row-no-media">
+          <div class="pub-content">
+            <h3>Block-R1: Rethinking the Role of Block Size in Multi-domain Reinforcement Learning for Diffusion Large Language Models</h3>
+            <div class="authors">
+              <strong>Yan Jiang</strong>, <a href="https://ruihongqiu.github.io/">Ruihong Qiu</a>, <a href="https://scholar.google.com/citations?user=iAWMsgEAAAAJ&hl=en">Zi Huang</a>
+            </div>
+            <p class="meta"><span class="pub-venue">Preprint</span></p>
+            <p>We study block-size domain conflict in multi-domain RL post-training for dLLMs, introduce Block-R1-41K and Block-R1 benchmark, and propose sample-level best-improved training block sizes.</p>
+            <div class="cta">
+              <button class="btn ghost open-abs"
+                data-title="Block-R1: Rethinking the Role of Block Size in Multi-domain Reinforcement Learning for Diffusion Large Language Models"
+                data-abstract="Recently, reinforcement learning (RL) has been widely applied during post-training for diffusion large language models (dLLMs) to enhance reasoning with block-wise semi-autoregressive generation. Block size has therefore become a vital factor in dLLMs, since it determines the parallel decoding granularity and affects the rollout trajectories during RL optimisation, e.g., GRPO. Instead of investigating the effect of block size during inference on individual domains, this paper studies block size from a domain conflict perspective for dLLM RL post-training in multi-domain scenarios. The main contributions are: (1) a formulation of domain block size conflict in multi-domain RL for dLLMs, which will largely affect the post-training effectiveness for rollout-based RL methods; (2) a novel dataset, Block-R1-41K is constructed with a best-improved training block size for each sample, which also induces a Block Size Conflict Score to quantitatively measure the domain conflict; (3) a new benchmark, Block-R1, for flexible RL post-training for dLLMs in both single and cross domain; and (4) a simple yet powerful cross-domain post-training method with sample-level best-improved training block sizes. Extensive experiments on 13 distinct datasets, 7 latest RL algorithms, and various different dLLM backbones are covered in Block-R1.">
+                Show abstract
+              </button>
+              <a class="btn" href="https://arxiv.org/abs/2605.11726" target="_blank" rel="noopener">Paper</a>
+              <a class="btn" href="https://github.com/YanJiangJerry/Block-R1" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Break the Block -->
+        <article class="pub-row pub-row-no-media">
+          <div class="pub-content">
+            <h3>Break the Block: Dynamic-size Reasoning Blocks for Diffusion Large Language Models via Monotonic Entropy Descent with Reinforcement Learning</h3>
+            <div class="authors">
+              <strong>Yan Jiang</strong>, <a href="https://ruihongqiu.github.io/">Ruihong Qiu</a>, <a href="https://scholar.google.com/citations?user=iAWMsgEAAAAJ&hl=en">Zi Huang</a>
+            </div>
+            <p class="meta"><span class="pub-venue">ICML 2026</span></p>
+            <p>We propose b1, a post-training framework that learns dynamic-size reasoning blocks via Monotonic Entropy Descent with reinforcement learning to improve reasoning coherence in dLLMs.</p>
+            <div class="cta">
+              <button class="btn ghost open-abs"
+                data-title="Break the Block: Dynamic-size Reasoning Blocks for Diffusion Large Language Models via Monotonic Entropy Descent with Reinforcement Learning"
+                data-abstract="Recent diffusion large language models (dLLMs) have demonstrated both effectiveness and efficiency in reasoning via a block-based semi-autoregressive generation paradigm. Despite their progress, the fixed-size block generations remain a critical bottleneck for effective and coherent reasoning. From a global perspective, different reasoning tasks correspond to different optimal decoding block sizes, which makes a one-size-fits-all assumption ineffective. Even within a single reasoning task, rigid block partitioning breaks the logical flow and reduces reasoning coherence. Through empirical observations, we reveal that for block-wise entropy, incorrect reasoning exhibits a fluctuating and unsteady trend between blocks, whereas correctly generated tasks follow a consistent descending trend. Therefore, this paper proposes b1, a novel post-training framework for dLLMs that learns dynamic-size reasoning blocks via a Monotonic Entropy Descent objective with reinforcement learning to enhance reasoning coherence. b1 integrates seamlessly as a plug-and-play module with existing dLLM post-training algorithms. Extensive experiments across various reasoning benchmarks showcase b1's consistent improvement over existing fixed-size block baselines.">
+                Show abstract
+              </button>
+              <a class="btn" href="https://arxiv.org/abs/2605.02263" target="_blank" rel="noopener">Paper</a>
+              <a class="btn" href="https://github.com/YanJiangJerry/Block-R1" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- GrapHoST / Homophily -->
+        <article class="pub-row pub-row-no-media">
+          <div class="pub-content">
+            <h3>Does Homophily Help in Robust Test-time Node Classification?</h3>
+            <div class="authors">
+              <strong>Yan Jiang</strong>, <a href="https://ruihongqiu.github.io/">Ruihong Qiu</a>, <a href="https://scholar.google.com/citations?user=iAWMsgEAAAAJ&hl=en">Zi Huang</a>
+            </div>
+            <p class="meta"><span class="pub-venue">WSDM 2026 - Oral</span></p>
+            <p>We propose GrapHoST, a label-free test-time graph structural transformation method that adaptively increases or decreases homophily to improve robust GNN node classification.</p>
+            <div class="cta">
+              <button class="btn ghost open-abs"
+                data-title="Does Homophily Help in Robust Test-time Node Classification?"
+                data-abstract="Homophily, the tendency of nodes from the same class to connect, is a fundamental property of real-world graphs, underpinning structural and semantic patterns in domains such as citation networks and social networks. Existing methods exploit homophily through designing homophily-aware GNN architectures or graph structure learning strategies, yet they primarily focus on GNN learning with training graphs. However, in real-world scenarios, test graphs often suffer from data quality issues and distribution shifts, such as domain shifts across users from different regions in social networks and temporal evolution shifts in citation network graphs collected over varying time periods. These factors significantly compromise the pre-trained model's robustness, resulting in degraded test-time performance. With empirical observations and theoretical analysis, we reveal that transforming the test graph structure by increasing homophily in homophilic graphs or decreasing it in heterophilic graphs can significantly improve the robustness and performance of pre-trained GNNs on node classifications, without requiring model training or update. Motivated by these insights, a novel test-time graph structural transformation method grounded in homophily, named GrapHoST, is proposed. Specifically, a homophily predictor is developed to discriminate test edges, facilitating adaptive test-time graph structural transformation by the confidence of predicted homophily scores. Extensive experiments on nine benchmark datasets under a range of test-time data quality issues demonstrate that GrapHoST consistently achieves state-of-the-art performance, with improvements of up to 10.92%.">
+                Show abstract
+              </button>
+              <a class="btn" href="https://arxiv.org/abs/2510.22289" target="_blank" rel="noopener">Paper</a>
+              <a class="btn" href="https://github.com/YanJiangJerry/GrapHoST" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ADC 2023 -->
+        <article class="pub-row pub-row-no-media">
+          <div class="pub-content">
+            <h3>Balanced and Explainable Social Media Analysis for Public Health with Large Language Models</h3>
+            <div class="authors">
+              <strong>Yan Jiang</strong>, <a href="https://ruihongqiu.github.io/">Ruihong Qiu</a>, Yi Zhang, Peng-Fei Zhang
+            </div>
+            <p class="meta"><span class="pub-venue">ADC 2023</span></p>
+            <p>We propose the ALEX framework for balanced and explainable social media analysis in public health using data augmentation and LLM-based explanation.</p>
+            <div class="cta">
+              <button class="btn ghost open-abs"
+                data-title="Balanced and Explainable Social Media Analysis for Public Health with Large Language Models"
+                data-abstract="As social media becomes increasingly popular, more and more public health activities emerge, which is worth noting for pandemic monitoring and government decision-making. Current techniques for public health analysis involve popular models such as BERT and large language models (LLMs). Although recent progress in LLMs has shown a strong ability to comprehend knowledge by being fine-tuned on specific domain datasets, the costs of training an in-domain LLM for every specific public health task are especially expensive. Furthermore, such kinds of in-domain datasets from social media are generally highly imbalanced, which will hinder the efficiency of LLMs tuning. To tackle these challenges, the data imbalance issue can be overcome by sophisticated data augmentation methods for social media datasets. In addition, the ability of the LLMs can be effectively utilised by prompting the model properly. In this paper, a novel ALEX framework is proposed for social media public health analysis with balanced training and LLM-based explanation.">
+                Show abstract
+              </button>
+              <a class="btn" href="https://arxiv.org/abs/2309.05951" target="_blank" rel="noopener">Paper</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- SMM4H 2023 -->
+        <article class="pub-row pub-row-no-media">
+          <div class="pub-content">
+            <h3>UQ at #SMM4H 2023: ALEX for Public Health Analysis with Social Media</h3>
+            <div class="authors">
+              <strong>Yan Jiang</strong>, <a href="https://ruihongqiu.github.io/">Ruihong Qiu</a>, Yi Zhang, <a href="https://scholar.google.com/citations?user=iAWMsgEAAAAJ&hl=en">Zi Huang</a>
+            </div>
+            <p class="meta"><span class="pub-venue">AMIA #SMM4H 2023</span></p>
+            <p>Our ALEX framework achieved top performance in SMM4H 2023 Tasks 2 and 4 via balanced training and LLM-based explanation for public health text classification.</p>
+            <div class="cta">
+              <button class="btn ghost open-abs"
+                data-title="UQ at #SMM4H 2023: ALEX for Public Health Analysis with Social Media"
+                data-abstract="As social media becomes increasingly popular, more and more activities related to public health emerge. Current techniques for public health analysis involve popular models such as BERT and large language models (LLMs). However, the costs of training in-domain LLMs for public health are especially expensive. Furthermore, such kinds of in-domain datasets from social media are generally imbalanced. To tackle these challenges, the data imbalance issue can be overcome by data augmentation and balanced training. Moreover, the ability of the LLMs can be effectively utilized by prompting the model properly. In this paper, a novel ALEX framework is proposed to improve the performance of public health analysis on social media by adopting an LLMs explanation mechanism. Results show that our ALEX model got the best performance among all submissions in both Task 2 and Task 4 with a high score in Task 1 in Social Media Mining for Health 2023 (SMM4H).">
+                Show abstract
+              </button>
+              <a class="btn" href="https://arxiv.org/abs/2309.04213" target="_blank" rel="noopener">Paper</a>
+              <a class="btn" href="https://github.com/YanJiangJerry/ALEX" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="experience" class="section">
+    <div class="container">
+      <h2 class="section-title">Teaching · Education</h2>
+      <div class="info-rows">
+
+        <article class="info-row">
+          <div class="info-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+          <div class="info-content">
+            <h3>Teaching</h3>
+            <ul class="list">
+              <li>2026: Tutor — Advanced Techniques for High Dimensional Data (INFS4205/7205), supervised by Dr. Yadan Luo</li>
+              <li>2025: Tutor — Advanced Techniques for High Dimensional Data (INFS4205/7205), supervised by Dr. Yadan Luo</li>
+              <li>2024: Tutor — Advanced Techniques for High Dimensional Data (INFS4205/7205), supervised by Dr. Yadan Luo</li>
+              <li>2023: Tutor — Advanced Techniques for High Dimensional Data (INFS4205/7205), supervised by Prof. Zi (Helen) Huang</li>
+              <li>2023: Tutor — Advanced Database Systems (INFS3200/7907), supervised by Dr. Yadan Luo</li>
+              <li>2023: Tutor — Relational Database Systems (INFS2200/7903), supervised by Prof. Xue Li</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="info-row">
+          <div class="info-icon"><i class="fa-solid fa-user-graduate"></i></div>
+          <div class="info-content">
+            <h3>Education</h3>
+            <ul class="list">
+              <li>2024–present: Doctor of Philosophy (PhD) in Computer Science, The University of Queensland</li>
+              <li>2020–2023: Bachelor of Computer Science / Master of Data Science, The University of Queensland — graduated 16 December 2023</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Modal (abstract popup) -->
+  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-dialog" role="document">
+      <button class="modal-close" aria-label="Close" data-close>&times;</button>
+      <h3 id="modal-title"></h3>
+      <p id="modal-body"></p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-flex">
+      <p>&copy; <span id="year"></span> Yan Jiang. All rights reserved.</p>
+      <p>Updated on 5/6/2026</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
