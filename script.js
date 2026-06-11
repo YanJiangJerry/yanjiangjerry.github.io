@@ -32,7 +32,7 @@ toggle.addEventListener('click', () => {
 // Typed line
 document.addEventListener('DOMContentLoaded', () => {
   new Typed('#typed-text', {
-    strings: ['CS PhD candidate', 'LLM & dLLM researcher', 'Teaching tutor at UQ'],
+    strings: ['PhD Student', 'LLM & dLLM Researcher', 'Teaching Staff', 'Research Assistant'],
     typeSpeed: 38,      
     backSpeed: 18,      
     backDelay: 1600,    // pause a bit longer
